@@ -1,17 +1,23 @@
+/* eslint-disable no-unused-vars */
 import './App.css';
+import { Searchbar } from './components/Searchbar/Searchbar';
 
 function App() {
   return (
     <div className="App">
-      <main>
+      <header>
         <div>
-          <input type="text" placeholder="Search for weather" />
-          <button type='button' >Search</button>
+          <p>
+            Weather
+          </p>
+          <Searchbar/>
         </div>
+      </header>
+      <div>
         <div>
           <h1>Weather</h1>
         </div>
-      </main>
+      </div>
     </div>
   );
 }
