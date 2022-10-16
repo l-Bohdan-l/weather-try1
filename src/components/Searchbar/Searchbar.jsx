@@ -2,6 +2,7 @@
 import {Header, Form, Button, Input} from './Searchbar.styled';
 import { FcSearch } from 'react-icons/fc';
 import { useState, useEffect } from 'react';
+import { fetch } from '../../services/ApiServices';
 
 export function Searchbar() {
     const [search, setSearch] = useState('');
@@ -21,7 +22,7 @@ export function Searchbar() {
         setSearch(e.target.value.toLowerCase());
     }
      
-
+    fetch()
 
     return (
         <Header>
