@@ -22,7 +22,9 @@ export function Searchbar() {
         setSearch(e.target.value.toLowerCase());
     }
      
-    fetch()
+    // fetch()
+    // eslint-disable-next-line no-undef
+    console.log(process.env.REACT_APP_API_KEY);
 
     return (
         <Header>
