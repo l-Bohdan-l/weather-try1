@@ -1,10 +1,9 @@
-// import * as dotenv from 'dotenv' 
-// dotenv.config()
+import axios
 
-// import express from 'express';
-// import process from 'nodejs'
-// const API_KEY = process.env.REACT_APP_API_KEY;
+// eslint-disable-next-line no-undef
+const API_KEY = process.env.REACT_APP_API_KEY;
 
-export const fetch = function () {
-    // console.log('d', API_KEY);
-}
+export const fetch = function (city) {
+    console.log('d', API_KEY);
+    return axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`);
+};
