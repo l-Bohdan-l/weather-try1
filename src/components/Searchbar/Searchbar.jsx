@@ -2,7 +2,7 @@
 import {Header, Form, Button, Input} from './Searchbar.styled';
 import { FcSearch } from 'react-icons/fc';
 import { useState, useEffect } from 'react';
-import { fetch } from '../../services/ApiServices';
+import { fetchCurrentWeather, fetchCity } from '../../services/ApiServices';
 
 export function Searchbar() {
     const [search, setSearch] = useState('');
@@ -16,12 +16,18 @@ export function Searchbar() {
 
         setSearch(e.target.value);
         console.log('search', search);
+        fetchCity(search);
+        // fetchCurrentWeather(search);
+        resetInput();
     }
 
     const handleChange = (e) => {
         setSearch(e.target.value.toLowerCase());
     }
      
+    const resetInput = () => { 
+        setSearch('');
+    }
     
 
     return (
@@ -31,6 +37,7 @@ export function Searchbar() {
                 onChange={handleChange}    
                 type="text"
                 placeholder="Search weather by city"
+                value ={search}    
                 />
 
                 <Button type="submit">

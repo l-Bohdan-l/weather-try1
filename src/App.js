@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import './App.css';
 import { Searchbar } from './components/Searchbar/Searchbar';
-
+import {CityList} from './components/CityList/CityList';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       </header>
       <div>
         <div>
-          <h1>Weather</h1>
+          <CityList/>
         </div>
       </div>
     </div>
